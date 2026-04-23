@@ -1,0 +1,38 @@
+.App {
+  min-height: 100vh;
+  background: #0A0A0A;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.4), transparent);
+}
+
+button {
+  transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.card-hover {
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
