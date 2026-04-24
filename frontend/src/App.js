@@ -4,7 +4,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import { Toaster } from './components/ui/sonner';
 
 import LandingPage from './pages/LandingPage';
-import Login from './pages/Login';
+import Login from './pages/LoginPage';
 import Register from './pages/Register';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
