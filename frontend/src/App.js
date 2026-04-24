@@ -5,8 +5,7 @@ import { Toaster } from './components/ui/sonner';
 
 import LandingPage from './pages/LandingPage';
 import Login from './pages/LoginPage';
-import Register from './pages/RegisterPage';
-import Onboarding from './pages/Onboarding';
+import Register from './pages/RegisterPage';import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
 import Subscription from './pages/Subscription';
 import AuthCallback from './pages/AuthCallback';
