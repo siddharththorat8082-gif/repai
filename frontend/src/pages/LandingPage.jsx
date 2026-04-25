@@ -5,6 +5,9 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Dumbbell } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,6 +16,21 @@ const Login = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log("CLICKED");   // 👈 test
+
+  setLoading(true);
+
+  try {
+    await login(email, password);
+    navigate('/dashboard');
+  } catch (error) {
+    console.log("Login failed");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleSubmit = async (e) => {
   e.preventDefault();
