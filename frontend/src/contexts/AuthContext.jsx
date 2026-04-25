@@ -8,12 +8,12 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
-    if (email && password) {
-      return true;
-    } else {
-      throw new Error("Invalid credentials");
-    }
-  };
+  console.log("EMAIL:", email);
+  console.log("PASSWORD:", password);
+
+  // force success (test)
+  return true;
+};
 
   return (
     <AuthContext.Provider value={{ login }}>
