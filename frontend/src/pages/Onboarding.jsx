@@ -37,13 +37,13 @@ const Onboarding = () => {
       );
       
       setUser({ ...user, onboarded: true });
-      toast.success('Profile complete!');
-      navigate('/dashboard');
-    } catch (error) {
-      toast.error('Failed to save profile');
-    } finally {
-      setLoading(false);
-    }
+console.log('Profile complete!'); //
+navigate('/dashboard');
+} catch (error) {
+  console.log('Failed to save profile'); //
+} finally {
+  setLoading(false);
+}
   };
 
   return (

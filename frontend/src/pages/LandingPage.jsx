@@ -16,20 +16,20 @@ const Login = () => {
   const API_URL = process.env.REACT_APP_BACKEND_URL;
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await login(email, password);
-      toast.success('Welcome back!');
-      navigate('/dashboard');
-    } catch (error) {
-      const detail = error.response?.data?.detail;
-      const errorMsg = typeof detail === 'string' ? detail : 'Login failed';
-      toast.error(errorMsg);
-    } finally {
-      setLoading(false);
-    }
-  };
+  e.preventDefault();
+  setLoading(true);
+  try {
+    await login(email, password);
+    console.log('Welcome back!'); // 
+    navigate('/dashboard');
+  } catch (error) {
+    const detail = error.response?.data?.detail;
+    const errorMsg = typeof detail === 'string' ? detail : 'Login failed';
+    console.log(errorMsg); // 
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleGoogleLogin = () => {
     const redirectUrl = window.location.origin + '/dashboard';
