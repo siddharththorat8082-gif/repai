@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-import { Toaster } from './components/ui/sonner';
 
 import LandingPage from './pages/LandingPage';
 import Login from './pages/LoginPage';
@@ -17,7 +16,6 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <AppRouter />
-        <Toaster position="top-right" />
       </BrowserRouter>
     </AuthProvider>
   );
