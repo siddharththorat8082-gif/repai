@@ -1,19 +1,17 @@
-import React, { createContext, useContext } from "react";
-
-const AuthContext = createContext();
-import { createContext, useContext } from "react";
+import { createContext, useContext } from 'react';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
-  console.log("EMAIL:", email);
-  console.log("PASSWORD:", password);
+    console.log("LOGIN CALLED");
+    console.log("EMAIL:", email);
+    console.log("PASSWORD:", password);
 
-  // force success (test)
-  return true;
-};
+    // 🔥 force success
+    return true;
+  };
 
   return (
     <AuthContext.Provider value={{ login }}>
