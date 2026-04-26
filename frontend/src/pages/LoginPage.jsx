@@ -17,7 +17,7 @@ const LoginPage = () => {
       console.log("SUCCESS");
       navigate('/dashboard');
     } catch (err) {
-      console.log("Login failed");
+      console.log(err.message);
     }
   };
 

@@ -1,10 +1,14 @@
-import React from 'react';
 import { Navigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 const ProtectedRoute = ({ children }) => {
-  const isLoggedIn = true; // 🔹 temporarily true ठेव (later auth logic लावू)
+  const { user } = useAuth();
 
-  return isLoggedIn ? children : <Navigate to="/login" />;
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
+
+  return children;
 };
 
 export default ProtectedRoute;
