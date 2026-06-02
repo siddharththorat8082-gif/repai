@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api";
 
@@ -11,6 +11,8 @@ const Register = () => {
 
   const [email, setEmail] =
     useState("");
+ 
+   const [loading, setLoading] = useState(false);
 
   const [password, setPassword] =
     useState("");
